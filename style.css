@@ -1,0 +1,30 @@
+/*paginas*/
+
+.piedepagina {
+    position:relative;
+    top: 15px;
+    background-color: rgb(40, 40, 41);
+    
+   
+    display:flex;
+    align-items: center;
+    color: grey;
+
+}
+
+.container {
+    align-items: center;
+    visibility:flex;
+
+}
+
+
+
+.bodyprincipal {
+    color: grey;
+    font-size: 20px;
+    font-style: inherit;
+    
+}
+
+/* carrusel trabajos */
