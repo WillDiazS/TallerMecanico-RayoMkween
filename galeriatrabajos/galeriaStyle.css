@@ -1,0 +1,10 @@
+.piedepagina {
+    position:relative;
+    font-weight: bold;
+    top: 15px;
+    background-color: rgb(40, 40, 41);
+}
+
+h5 {
+    color: red;
+}
