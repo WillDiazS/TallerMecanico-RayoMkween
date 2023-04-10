@@ -2,10 +2,9 @@
 
 .piedepagina {
     position:relative;
+    font-weight: bold;
     top: 15px;
-    background-color: rgb(40, 40, 41);
-    
-   
+    background-color: rgb(40, 40, 41);   
     display:flex;
     align-items: center;
     color: grey;
@@ -14,9 +13,10 @@
 
 .container {
     align-items: center;
-    visibility:flex;
+    display:flex;
 
 }
+
 
 
 
@@ -26,5 +26,16 @@
     font-style: inherit;
     
 }
+
+
+p {
+    text-align:center;
+    font-weight: bold;
+}
+
+h1 {
+    text-align:left;
+}
+
 
 /* carrusel trabajos */
