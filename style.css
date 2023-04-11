@@ -1,5 +1,5 @@
-/*paginas*/
-
+/*pagina INDEX/ROOT*/
+/*pie de paginas*/
 .piedepagina {
     position:relative;
     font-weight: bold;
@@ -10,14 +10,16 @@
     color: grey;
 
 }
-
+/*Contenedores*/
 .container {
     align-items: center;
     display:flex;
 
 }
 
-
+.contenido {
+    text-align: center;
+}
 
 
 .bodyprincipal {
