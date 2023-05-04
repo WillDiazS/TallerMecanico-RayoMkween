@@ -139,14 +139,15 @@
                          
                          $("#styleform").submit(function(event){
                           
+                          event.preventDefault();
+
 
                           var rut = $("#rut").val();
                           if(!validarRut(rut)) {
                             alert("Error.-")
                           }
-
-
-
+                          
+                          
 
                          });
 
