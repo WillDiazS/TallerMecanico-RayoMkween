@@ -1,43 +1,51 @@
-/*pagina INDEX/ROOT*/
-/*pie de paginas*/
-.piedepagina {
-    position:relative;
-    font-weight: bold;
-    top: 15px;
-    background-color: rgb(40, 40, 41);   
-    display:flex;
-    align-items: center;
-    color: grey;
-
-}
-/*Contenedores*/
-.container {
-    align-items: center;
-    display:flex;
-
+#bodyindex {
+    margin-top:20%;
+    margin-bottom: 20%;
 }
 
-.contenido {
+.social {
     text-align: center;
+    display:flex;
+    border:solid 3px black
 }
 
+#piepag {
+    display:flex;
+    text-align:right
+}
 
-.bodyprincipal {
-    color: grey;
-    font-size: 20px;
-    font-style: inherit;
+p,h2,h3 {
+    display:flex;
+    font-size: 15px;
+    text-align: center; 
+    width:700px;
+    font-family: "Courier New";  
+}
+
+h2:hover, h3:hover {
+    background-color: black;
+    font-weight: bold;
     
 }
 
-
-p {
-    text-align:center;
-    font-weight: bold;
+#contacform {
+    margin-top: 25px;
 }
 
-h1 {
-    text-align:left;
+h4 {
+    margin-top: 120px;
 }
 
+h4:hover{
+    background-color: black;
 
-/* carrusel trabajos */
+}
+
+button {
+    align-items: center;
+}
+
+#styleform {
+    margin-left: 100px;
+    margin-right: 80px;
+}
