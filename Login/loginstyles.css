@@ -1,41 +1,30 @@
-/*paginas*/
-
-.piedepagina {
-    position:relative;
-    font-weight: bold;
-    top: 15px;
-    background-color: rgb(40, 40, 41);   
-    display:flex;
-    align-items: center;
-    color: grey;
-
+form {
+    margin-top: 25px;
+    
 }
 
-.container {
+h4 {
+    margin-top: 120px;
+    margin-left: 150px;;
+    margin-right: 200px;
+    margin-bottom: 60px;
     align-items: center;
-    display:flex;
-
-}
-
-
-
-
-.bodyprincipal {
-    color: grey;
-    font-size: 20px;
-    font-style: inherit;
     
 }
 
 
-p {
-    text-align:center;
-    font-weight: bold;
+#logincliente {
+    margin-top: 25px;
+    margin-left: 150px;
+    margin-right: 200px;
+    margin-bottom: 120px;
 }
 
-h1 {
-    text-align:left;
+label:hover {
+    background-color: black;
 }
 
-
-/* carrusel trabajos */
+footer {
+    text-align: center;
+    height:100px;
+}

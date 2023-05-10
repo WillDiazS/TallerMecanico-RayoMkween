@@ -7,112 +7,185 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic' rel='stylesheet'>
     <link rel='stylesheet' href='loginstyles.css'>
-    <title>Acceso Clientes</title>
+    <script src="../js/validacionesClient.js"></script>
+    <script src="../js/jquery-3.6.4.min.js"></script>
+    <title>Menu de ingreso de clientes</title>
 </head>
 <body class="p-3 mb-2 bg-dark text-white">
-<header>
-  <!-- Menu de navegacion -->
-  <div class="row">               
-    <nav class="navbar bg-primary"  data-bs-theme="dark">
-              <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">            
-        <a class="navbar-brand" href="#">Menú</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+  <header>
+    <!-- Menu de navegacion -->
+    <div class="container-fluid">  
+     <div class="col">
+           
+       <nav class="navbar fixed-top navbar bg-dark p-4" data-bs-theme="dark" >        
+         <a class="navbar-brand" href="#" aria-label="Menu de navegación"> Taller Mecanico Rayo Mkween </a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-          aria-label="Toggle navigation">
+          aria-label="Botón de Menu.">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="../Index.html">Inicio</a>
+              <a class="nav-link active" aria-current="page" href="../Index.html">Inicio <i class="fa-solid fa-house fa-2xs"></i></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../galeriatrabajos/Index.html">Trabajos Realizados</a>
+              <a class="nav-link" href="../galeriatrabajos/Index.html">Trabajos Realizados <i class="fa-sharp fa-solid fa-image fa-2xs"></i></a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Acceso Clientes/Mecanicos
-              </a>
+              <a class="nav-link dropdown-toggle" href="#" role="button" aria-haspopup="true" data-bs-toggle="dropdown"
+                aria-expanded="false" aria-labelledby="accessLink">
+                Acceso<i class="fa-solid fa-lock fa-2xs"></i></a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="../Login/loginCliente.html">Ingrego Cliente</a></li>
-                <li><a class="dropdown-item" href="../Login/loginMecanico.html">Ingreso Mecanico</a></li>
+                <li><a class="dropdown-item" href="../Login/loginCliente.html">Ingreso Administrador <i class="fa-solid fa-lock fa-2xs"></i></a></li>
+                <li><a class="dropdown-item" href="../Login/loginMecanico.html">Ingreso Mecánico <i class="fa-solid fa-lock fa-2xs"></i></a></li>
+                <li><a class="dropdown-item" href="../Login/loginMecanico.html">Ingreso Cliente <i class="fa-solid fa-lock fa-2xs"></i></a></li>
                 <li>
                   <hr class="dropdown-divider">
                 </li>
-                <li><a class="dropdown-item" href="../Login/register.html">Registarse</a></li>
+                <li><a class="dropdown-item" href="../Login/register.html">Registar Nuevo Usuario <i class="fa-sharp fa-solid fa-plus fa-beat fa-2xs"></i></a></li>
               </ul>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../contacto.html">Contactanos</a>
-            </li>
+            <li class="nav-item"><a class="nav-link" href="../contacto.html">Contactanos <i class="fa-solid fa-paper-plane fa-2xs"></i></li></a>
           </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Buscar</button>
+          <form class="d-flex" role="buscar">
+            <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Buscar">
+            <button class="btn btn-outline-success" id="buscarNav" type="submit">Buscar</button>
             
           </form>
-        </div>
-      </div>
-    </nav> 
-    </nav>   
-  </div>
-</div>
-</div>
-</div>
-</header>      
+ 
+       </nav>
+     </div>
+     
+     </div>
+    </div>
+   </div> 
+ </header>
 
 <main>
-  <div class="container">    
-     <div class="row">
-       
-          <span class="border border-info">
-           <div class="p-3 mb-2 bg-dark text-white">         
-         <div class="d-flex justify-content-center">
-         <div>
-          <h2>Ingreso Clientes</h2> 
-             <form>
-                   <div class="mb-3">
-                   <label for="exampleInputEmail1" class="form-label">Correo Electronico:</label>
-                   <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                   <div id="emailHelp" class="form-text"></div>
-                 </div>
-                 <div class="mb-3">
-                   <label for="exampleInputPassword1" class="form-label">Contraseña:</label>
-                   <input type="password" class="form-control" id="exampleInputPassword1">
-                 </div>
-                 <div class="mb-3 form-check">
-                   <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                   <label class="form-check-label" for="exampleCheck1">Recordarme</label>
-                 </div>
-                 <button type="submit" class="btn btn-primary">Ingresar</button>
-               </form>
-             </div>  
-          </span> 
-          </div>
-          </div>
-         </div>
-       </div>    
-</main>
-          
-          
-          <footer>
-            <div> <!--footer-->
-                <div class="piedepagina">
-                    <p>Todos los derechos reservados 
-                       Taller Mecanico Rayo Mkweeen © -Sitio Web en contruccion-
-                    </p>
-        
-                </div>
-            </footer>
-    
-    
-    
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
-            crossorigin="anonymous"></script>    
- </body>
+  
+  <div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="card-body">
+        <h4>Ingreso Clientes <i class="fa-solid fa-lock fa-2xs"></i> </h4>
+        <form class="row mp-3 needs-validation" id="logincliente" novalidate>
 
-     
+
+          <div class="mb-3">
+            <label for="email" class="form-label" aria-label="Ingrese su correo electronico.">Email: </label>
+            <input type="text" class="form-control" id="email" aria-required="true" placeholder="Ingrese su email." required>
+            <div class="valid-feedback">
+              Nice
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="password" class="form-label" aria-label="Ingrese su password o contraseña">Password:</label>
+            <input type="password" class="form-control" id="password" aria-required="true" placeholder="" required>
+            <div class="valid-feedback">
+              Nice
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="row"></div>
+
+            <button id="entrarCliente" type="submit" class="btn btn-primary" aria-label="Boton Ingresar">Ingresar</button>
+
+
+
+          </div>
+
+
+        </form>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+    
+</main>
+  
+          
+<footer> <!--footer-->
+  
+  
+
+  <div class="container">
+    <div class="row">
+      
+        <div class="col-4"><a href="http://www.facebook.com" aria-label="Enlace a red social Faceook"><i class="fa-brands fa-facebook fa-beat-fade fa-lg"></i></a></div>
+        <div class="col-4"><a href="http://wwww.twitter.com" aria-label="Enlace a red social Twitter"><i class="fa-brands fa-twitter fa-beat-fade fa-lg" style="color: #4854fa;"></i></a></div>
+        <div class="col-4"><a href="http://www.istagram.com" aria-label="Enlcae a red social Instagram"><i class="fa-brands fa-instagram fa-beat-fade fa-lg" style="color: #c000f5;"></i></a></div>
+      
+    </div>
+    
+
+  <div class="container-fluid" >
+    <div class="row" >
+      <p>Todos los derechos reservados <br>Taller Mecanico Rayo Mkween ©</p>
+      <p aria-label="Sitio Web Accesible para usuarios que utilicen Aria.">_<i class="fa-brands fa-accessible-icon fa-bounce fa-lg"></i>_</p>
+      
+    </div>
+  </div>
+</div>      
+
+  
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/1dfe34419e.js" crossorigin="anonymous"></script>
+</footer>
+</body>  
 </html>
+
+<script> //Script validacionForm Bootstrap
+
+  (function () {
+    'use strict'
+
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.querySelectorAll('.needs-validation')
+
+    // Loop over them and prevent submission
+    Array.prototype.slice.call(forms)
+      .forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+
+          form.classList.add('was-validated')
+        }, false)
+      })
+  })() 
+
+</script>
+
+<script>
+
+  $('#logincliente').submit(function(event){
+      event.preventDefault();
+
+      var email = $('#email').val();
+      if(!validarEmail(email)) {
+        alert(`El email ingresado: ${email}. Es Erroneo`)
+        return
+      }
+
+      var password = $('#password').val();
+      if(!validarPassword(password)) {
+        alert(`Error en contraseña`)
+        return
+      }
+
+      window.location.href = '../vistasOK/Index.html';
+
+  });
+
+</script>
