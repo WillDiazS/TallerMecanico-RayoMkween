@@ -7,9 +7,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic' rel='stylesheet'>
     <link rel='stylesheet' href='loginstyles.css'>
+    <script src="../js/validacionesAdmin.js"></script>
     <script src="../js/jquery-3.6.4.min.js"></script>
-    <script src="../js/validacionesMecanico.js"></script>
-    <title>Menu de ingreso de mecanicos</title>
+    <title>Menu ingreso Administrador</title>
 </head>
 <body class="p-3 mb-2 bg-dark text-white">
   <header>
@@ -68,8 +68,8 @@
   <div class="row">
     <div class="col">
       <div class="card-body">
-        <h4>Ingreso Mecanicos<i class="fa-solid fa-lock fa-2xs"></i> </h4>
-        <form class="row mp-3 needs-validation" id="loginmecanicos" novalidate>
+        <h4>Ingreso Administrador <i class="fa-solid fa-lock fa-2xs"></i> </h4>
+        <form class="row mp-3 needs-validation" id="loginadmin" novalidate>
 
 
           <div class="mb-3">
@@ -171,22 +171,22 @@
 
 <script>
 
-  $('#loginmecanicos').submit(function(event){
+  $('#loginadmin').submit(function(event){
       event.preventDefault();
 
       var email = $('#email').val();
-      if(!validarEmailMecanico(email)) {
+      if(!validarEmailAdmin(email)) {
         alert(`El email ingresado: ${email}. Es Erroneo`)
         return
       }
 
       var password = $('#password').val();
-      if(!validarPasswordMecanico(password)) {
+      if(!validarPasswordAdmin(password)) {
         alert(`Error en contraseña. Debe Tener 6 carácteres.`)
         return
       }
-      
-      window.location.href = '../vistasOK/registro/IndexMecanico.html';
+
+      window.location.href = '../vistasOK/Admin/IndexAdmin.html';
 
   });
 

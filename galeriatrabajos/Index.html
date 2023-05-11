@@ -6,140 +6,145 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic' rel='stylesheet'>
-    <link rel='stylesheet' href='/galeriatrabajos/galeriaStyle.css'>
-    <title>Galeria de Trabajos</title>
+    <link rel='stylesheet' href='galeriaStyle.css'>
+    <script src="../js/validacionesAdmin.js"></script>
+    <script src="../js/jquery-3.6.4.min.js"></script>
+    <title>Menu ingreso Administrador</title>
 </head>
-<body class="p-3 mb-2 bg-dark text-white"> 
-     <!-- Menu de navegacion -->
-  <div class="row">               
-   <nav class="navbar bg-primary"  data-bs-theme="dark">
-             <nav class="navbar navbar-expand-lg bg-body-tertiary">
-     <div class="container-fluid">            
-       <a class="navbar-brand" href="#">Menú</a>
-       <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-         aria-label="Toggle navigation">
-         <span class="navbar-toggler-icon"></span>
-       </button>
-       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-           <li class="nav-item">
-             <a class="nav-link active" aria-current="page" href="../Index.html">Inicio</a>
-           </li>
-           <li class="nav-item">
-             <a class="nav-link" href="../galeriatrabajos/Index.html">Trabajos Realizados</a>
-           </li>
-           <li class="nav-item dropdown">
-             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-               aria-expanded="false">
-               Acceso Clientes/Mecanicos
-             </a>
-             <ul class="dropdown-menu">
-               <li><a class="dropdown-item" href="../Login/loginCliente.html">Ingrego Cliente</a></li>
-               <li><a class="dropdown-item" href="../Login/loginMecanico.html">Ingreso Mecanico</a></li>
-               <li>
-                 <hr class="dropdown-divider">
-               </li>
-               <li><a class="dropdown-item" href="../Login/register.html">Registarse</a></li>
-             </ul>
-           </li>
-           <li class="nav-item">
-             <a class="nav-link" href="../contacto.html">Contactanos</a>
-           </li>
-         </ul>
-         <form class="d-flex" role="search">
-           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-           <button class="btn btn-outline-success" type="submit">Buscar</button>
+<body class="p-3 mb-2 bg-dark text-white">
+  <header>
+    <!-- Menu de navegacion -->
+    <div class="container-fluid">  
+     <div class="col">
            
-         </form>
-       </div>
+       <nav class="navbar fixed-top navbar bg-dark p-4" data-bs-theme="dark" >        
+        <a class="navbar-brand" href="#" aria-label="Menu de navegación"> <div class="container"><div class="col-4"><img id="logoNavBar" src="../images/logo1.png"/></div></div>Taller Mecanico Rayo Mkween <em>Garantia es confianza.</em> </a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Botón de Menu.">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../Index.html">Inicio <i class="fa-solid fa-house fa-2xs"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../galeriatrabajos/Index.html">Trabajos Realizados <i class="fa-sharp fa-solid fa-image fa-2xs"></i></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" aria-haspopup="true" data-bs-toggle="dropdown"
+                aria-expanded="false" aria-labelledby="accessLink">
+                Acceso<i class="fa-solid fa-lock fa-2xs"></i></a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="../Login/loginAdmin.html">Ingreso Administrador <i class="fa-solid fa-lock fa-2xs"></i></a></li>
+                <li><a class="dropdown-item" href="../Login/loginMecanico.html">Ingreso Mecánico <i class="fa-solid fa-lock fa-2xs"></i></a></li>
+                <li><a class="dropdown-item" href="../Login/loginCliente.html">Ingreso Cliente <i class="fa-solid fa-lock fa-2xs"></i></a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="../Login/register.html">Registar Nuevo Usuario <i class="fa-sharp fa-solid fa-plus fa-beat fa-2xs"></i></a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="../contacto.html">Contactanos <i class="fa-solid fa-paper-plane fa-2xs"></i></li></a>
+          </ul>
+          <form class="d-flex" role="buscar">
+            <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Buscar">
+            <button class="btn btn-outline-success" id="buscarNav" type="submit">Buscar</button>
+            
+          </form>
+ 
+       </nav>
      </div>
-   </nav> 
-   </nav>   
-   
- </div>
-</div>
-</div>
-</div>
+     
+     </div>
+    </div>
+   </div> 
+ </header>
 
-  <main>
+<main>
 
-    <div class="bodytrabajos">
-      <h2>¿Que trabajos hemos realizado?</h2>
-      <p> Aqui encontraras una lista de trabajos
-          que hemos realizado junto con todos los Detalles 
-          y el mecanico que los realizó.
-      </p>
+  <h1>En construccion</h1>
+    
+</main>
+  
+          
+<footer> <!--footer-->
+  
+  
 
-    <div id="carrusel">
-      <div class="container">
-      <div class="row">          
+  <div class="container">
+    <div class="row">
+      
+        <div class="col-4"><a href="http://www.facebook.com" aria-label="Enlace a red social Faceook"><i class="fa-brands fa-facebook fa-beat-fade fa-lg"></i></a></div>
+        <div class="col-4"><a href="http://wwww.twitter.com" aria-label="Enlace a red social Twitter"><i class="fa-brands fa-twitter fa-beat-fade fa-lg" style="color: #4854fa;"></i></a></div>
+        <div class="col-4"><a href="http://www.istagram.com" aria-label="Enlcae a red social Instagram"><i class="fa-brands fa-instagram fa-beat-fade fa-lg" style="color: #c000f5;"></i></a></div>
+      
+    </div>
+    
 
-        <div id="carouselExampleCaptions" class="carousel slide">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          </div>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="/images/carrousel-images/trabajo1.jpg" class="d-block w-100 " alt="...">
-              <div class="carousel-caption">
-                <h5>Primer Trabajo realizado</h5>
-                <p>El mecanido que realizo el trabajo:     detalles del trabajo:</p>
-                <a href="#" class="btn-secondary">Detalles Click Aqui</a>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="/images/carrousel-images/trabajo2.jpg" class="d-block w-100" alt="...">
-              <div class="carousel-caption">
-                <h5>Segundo Trabajo realizado</h5>
-                <p>El mecanido que realizo el trabajo:     detalles del trabajo:</p>
-                <a href="#" class="btn-secondary">Detalles Click Aqui</a>
-            </div>
-            <div class="carousel-item">
-              <img src="/images/carrousel-images/trabajo2.jpg" class="d-block w-100" alt="...">
-              <div class="carousel-caption">
-                <h5>Tercer Trabajo realizado</h5>
-                <p>El mecanido que realizo el trabajo:     detalles del trabajo:</p>
-                <a href="#" class="btn-secondary">Detalles Click Aqui</a>
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-
-      </div>
-      </div>
+  <div class="container-fluid" >
+    <div class="row" >
+      <p>Todos los derechos reservados <br>Taller Mecanico Rayo Mkween ©</p>
+      <p aria-label="Sitio Web Accesible para usuarios que utilicen Aria.">_<i class="fa-brands fa-accessible-icon fa-bounce fa-lg"></i>_</p>
+      
     </div>
   </div>
+</div>      
+
+  
 
 
-  </main>
-
-
-
-
-
-
-  <footer>
-    <div> <!--footer-->
-        <div class="piedepagina">
-            <p>Todos los derechos reservados 
-               Taller Mecanico Rayo Mkweeen © -Sitio Web en contruccion-
-            </p>
-
-        </div>
-    </footer>
-      
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
-          integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
-          crossorigin="anonymous"></script>   
-</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/1dfe34419e.js" crossorigin="anonymous"></script>
+</footer>
+</body>  
 </html>
+
+<script> //Script validacionForm Bootstrap
+
+  (function () {
+    'use strict'
+
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.querySelectorAll('.needs-validation')
+
+    // Loop over them and prevent submission
+    Array.prototype.slice.call(forms)
+      .forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+
+          form.classList.add('was-validated')
+        }, false)
+      })
+  })() 
+
+</script>
+
+<script>
+
+  $('#loginadmin').submit(function(event){
+      event.preventDefault();
+
+      var email = $('#email').val();
+      if(!validarEmailAdmin(email)) {
+        alert(`El email ingresado: ${email}. Es Erroneo`)
+        return
+      }
+
+      var password = $('#password').val();
+      if(!validarPasswordAdmin(password)) {
+        alert(`Error en contraseña. Debe Tener 6 carácteres.`)
+        return
+      }
+
+      window.location.href = '../vistasOK/Admin/IndexAdmin.html';
+
+  });
+
+</script>

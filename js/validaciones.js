@@ -34,14 +34,13 @@ const validarRut = rut => {
     };
 
     const validarCelular = celular => {
-        if (!isNaN(celular)) {
+        if (!isNaN(celular) && celular.toString().length === 9){
             return true;                       
         }else{
         return false
     }
     
     };
-
     
     const validarTextArea = textoMotivo => {
         if (textoMotivo.length >= 10 && textoMotivo.length <= 250) {

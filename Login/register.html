@@ -4,126 +4,224 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuevo usuario Taller mecanico Rayo Mkween</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic' rel='stylesheet'>
     <link rel='stylesheet' href='loginstyles.css'>
+    <script src="../js/validacionesRegister.js"></script>
+    <script src="../js/jquery-3.6.4.min.js"></script>
+    <title>Registro de Nuevo usuario</title>
 </head>
 <body class="p-3 mb-2 bg-dark text-white">
-   <!-- Menu de navegacion -->
-   <div class="row">               
-    <nav class="navbar bg-primary"  data-bs-theme="dark">
-              <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">            
-        <a class="navbar-brand" href="#">Menú</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true"
-          aria-label="boton navegacion">
+  <header>
+    <!-- Menu de navegacion -->
+    <div class="container-fluid">  
+     <div class="col">
+           
+       <nav class="navbar fixed-top navbar bg-dark p-4" data-bs-theme="dark" >        
+        <a class="navbar-brand" href="#" aria-label="Menu de navegación"> <div class="container"><div class="col-4"><img id="logoNavBar" src="../images/logo1.png"/></div></div>Taller Mecanico Rayo Mkween <em>Garantia es confianza.</em> </a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Botón de Menu.">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="../Index.html">Inicio</a>
+              <a class="nav-link active" aria-current="page" href="../Index.html">Inicio <i class="fa-solid fa-house fa-2xs"></i></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../galeriatrabajos/Index.html">Trabajos Realizados</a>
+              <a class="nav-link" href="../galeriatrabajos/Index.html">Trabajos Realizados <i class="fa-sharp fa-solid fa-image fa-2xs"></i></a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Acceso Clientes/Mecanicos
-              </a>
+              <a class="nav-link dropdown-toggle" href="#" role="button" aria-haspopup="true" data-bs-toggle="dropdown"
+                aria-expanded="false" aria-labelledby="accessLink">
+                Acceso<i class="fa-solid fa-lock fa-2xs"></i></a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="../Login/loginCliente.html">Ingrego Cliente</a></li>
-                <li><a class="dropdown-item" href="../Login/loginMecanico.html">Ingreso Mecanico</a></li>
+                <li><a class="dropdown-item" href="../Login/loginAdmin.html">Ingreso Administrador <i class="fa-solid fa-lock fa-2xs"></i></a></li>
+                <li><a class="dropdown-item" href="../Login/loginMecanico.html">Ingreso Mecánico <i class="fa-solid fa-lock fa-2xs"></i></a></li>
+                <li><a class="dropdown-item" href="../Login/loginCliente.html">Ingreso Cliente <i class="fa-solid fa-lock fa-2xs"></i></a></li>
                 <li>
                   <hr class="dropdown-divider">
                 </li>
-                <li><a class="dropdown-item" href="../Login/register.html">Registarse</a></li>
+                <li><a class="dropdown-item" href="../Login/register.html">Registar Nuevo Usuario <i class="fa-sharp fa-solid fa-plus fa-beat fa-2xs"></i></a></li>
               </ul>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../contacto.html">Contactanos</a>
-            </li>
+            <li class="nav-item"><a class="nav-link" href="../contacto.html">Contactanos <i class="fa-solid fa-paper-plane fa-2xs"></i></li></a>
           </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Buscar</button>
+          <form class="d-flex" role="buscar">
+            <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Buscar">
+            <button class="btn btn-outline-success" id="buscarNav" type="submit">Buscar</button>
             
           </form>
-        </div>
+ 
+       </nav>
+     </div>
+     
+     </div>
+    </div>
+   </div> 
+ </header>
+
+<main>
+  
+  <div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="card-body">
+        <h4>Registro Nuevo Usuario <i class="fa-sharp fa-solid fa-plus fa-beat fa-2xs"></i> </h4>
+        <form class="row mp-3 needs-validation" id="newUser" novalidate>
+
+          <div class="mb-3">
+            <label for="nombre" class="form-label" aria-label="Ingrese su nombre.">Nombre:</label>
+            <input type="text" class="form-control" id="nombre" aria-required="true" placeholder="Ingrese su nombre" required>
+            <em>El nombre debe tener al menos 9 carácteres.</em>
+            <div class="valid-feedback">
+              Nice
+            </div>
+          </div>
+
+
+
+          <div class="mb-3">
+            <label for="email" class="form-label" aria-label="Ingrese su correo electronico.">Email:</label>
+            <input type="text" class="form-control" id="email" aria-required="true" placeholder="Ingrese su email." required>
+            <em>El email debe tener al menos 9 carácteres.</em>
+            <div class="valid-feedback">
+              Nice
+            </div>
+          </div>
+          
+          <div class="mb-3">
+            <label for="password1" class="form-label" aria-label="Ingrese su password o contraseña">Password:</label>
+            <input type="password" class="form-control" id="password1" aria-required="true" placeholder="" required>
+            <em>Password debe tener 6 carácteres.</em>
+            <div class="valid-feedback">
+              Nice
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="password2" class="form-label" aria-label="Repita la password o contraseña.">Repita Password:</label>
+            <input type="password" class="form-control" id="password2" aria-required="true" placeholder="" required>
+            <em>Password debe tener 6 carácteres.</em>
+            <div class="valid-feedback">
+              Nice
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="row"></div>
+
+            <button id="registrarUsuario" type="submit" class="btn btn-primary" aria-label="Boton Registrar">Registrar</button>
+
+
+
+          </div>
+
+
+        </form>
       </div>
-    </nav> 
-    </nav>   
+
+    </div>
+
   </div>
 </div>
-</div>
-</div>
 
-<main>     
-    <div class="container"> <!--Formulario nuevo usuario-->
-      <div class="row"> 
-        <div class="form-group">
-
-      <form>
-        <h3>Registrar Usuario</h3>
-        
+    
+</main>
+  
           
-           
-            <span class="border border-info">
-              <div class="p-3 mb-2 bg-dark text-white">
-                <div class="d-flex justify-content-center">      
-                  <label for="nombre">Nombre:</label>
-                  <input type="text" class="form-control" id="primernombre" aria-describedby="Primernombre"
-                    placeholder="Ingrese Nombre">      
-                </div>
-                <div class="form-group">
-                  <label for="apellido">Apellido:</label>
-                  <input type="text" class="form-control" id="apellido" placeholder="Ingrese Apellido">
-                </div>
-                <div class="form-group">
-                  <label for="nombre">Correo Electronico:</label>
-                  <input type="text" class="form-control" id="email" aria-describedby="email"
-                    placeholder="Ingrese correo electronico">      
-                </div>
-                <div class="form-group">
-                  <label for="nombre">Contraseña:</label>
-                  <input type="text" class="form-control" id="password1" aria-describedby="password1"
-                    placeholder="Contraseña debe coincidir">      
-                </div>      
-                <div class="form-group">
-                  <label for="nombre">Confirme Contraseña:</label>
-                  <input type="text" class="form-control" id="password2" aria-describedby="password2"
-                    placeholder="Ingrese debe coincidir">      
-                </div>      
-                <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                  <label class="form-check-label" for="exampleCheck1">Acepto las condiciones. Recibir noticias,notificaciones
-                    y ofertas de taller mecanido Mkween.</label>
-                </div>
-                <button type="registrar" class="btn btn-primary">Registrar</button>
-      </form></body></span>
-        </div>
-      </div>
+<footer> <!--footer-->
+  
+  
+
+  <div class="container">
+    <div class="row">
+      
+        <div class="col-4"><a href="http://www.facebook.com" aria-label="Enlace a red social Faceook"><i class="fa-brands fa-facebook fa-beat-fade fa-lg"></i></a></div>
+        <div class="col-4"><a href="http://wwww.twitter.com" aria-label="Enlace a red social Twitter"><i class="fa-brands fa-twitter fa-beat-fade fa-lg" style="color: #4854fa;"></i></a></div>
+        <div class="col-4"><a href="http://www.istagram.com" aria-label="Enlcae a red social Instagram"><i class="fa-brands fa-instagram fa-beat-fade fa-lg" style="color: #c000f5;"></i></a></div>
+      
+    </div>
+    
+
+  <div class="container-fluid" >
+    <div class="row" >
+      <p>Todos los derechos reservados <br>Taller Mecanico Rayo Mkween ©</p>
+      <p aria-label="Sitio Web Accesible para usuarios que utilicen Aria.">_<i class="fa-brands fa-accessible-icon fa-bounce fa-lg"></i>_</p>
+      
     </div>
   </div>
-</div>
-</main> 
+</div>      
 
-<footer>
-  <div> <!--footer-->
-      <div class="piedepagina">
-          <p>Todos los derechos reservados 
-             Taller Mecanico Rayo Mkweeen © -Sitio Web en contruccion-
-          </p>
-
-      </div>
-  </footer>
+  
 
 
-      
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
-    crossorigin="anonymous"></script>
-</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/1dfe34419e.js" crossorigin="anonymous"></script>
+</footer>
+</body>  
 </html>
+
+<script> //Script validacionForm Bootstrap
+
+  (function () {
+    'use strict'
+
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.querySelectorAll('.needs-validation')
+
+    // Loop over them and prevent submission
+    Array.prototype.slice.call(forms)
+      .forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+
+          form.classList.add('was-validated')
+        }, false)
+      })
+  })() 
+
+</script>
+
+<script>
+
+  $('#newUser').submit(function(event){
+      event.preventDefault();
+
+      var nombre = $('#nombre').val();
+      if(!validarNombre(nombre)) {
+        alert (`El nombre igresado: ${nombre}. Es Erroneo.`)
+        return
+      }
+ 
+
+      var email = $('#email').val();
+      if(!validarEmail(email)) {
+        alert(`El email ingresado: ${email}. Es Erroneo`)
+        return
+      }
+
+      var password1 = $('#password1').val();
+      var password2 = $('#password2').val();
+      
+      if(!validarPassword1(password1)) {
+        alert('La contraseña debe tener al menos 6 carácteres.')
+      }
+      
+      if(password1 !== password2) {
+
+        alert('Las contraseñas no coinciden.')
+        return
+      } 
+      
+
+      window.location.href = '../vistasOK/registro/registerOK.html';
+
+  });
+
+</script>

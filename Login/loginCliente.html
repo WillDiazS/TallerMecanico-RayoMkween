@@ -18,7 +18,7 @@
      <div class="col">
            
        <nav class="navbar fixed-top navbar bg-dark p-4" data-bs-theme="dark" >        
-         <a class="navbar-brand" href="#" aria-label="Menu de navegación"> Taller Mecanico Rayo Mkween </a>
+        <a class="navbar-brand" href="#" aria-label="Menu de navegación"> <div class="container"><div class="col-4"><img id="logoNavBar" src="../images/logo1.png"/></div></div>Taller Mecanico Rayo Mkween <em>Garantia es confianza.</em> </a>
          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
           aria-label="Botón de Menu.">
@@ -37,7 +37,7 @@
                 aria-expanded="false" aria-labelledby="accessLink">
                 Acceso<i class="fa-solid fa-lock fa-2xs"></i></a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="../Login/loginCliente.html">Ingreso Administrador <i class="fa-solid fa-lock fa-2xs"></i></a></li>
+                <li><a class="dropdown-item" href="../Login/loginAdmin.html">Ingreso Administrador <i class="fa-solid fa-lock fa-2xs"></i></a></li>
                 <li><a class="dropdown-item" href="../Login/loginMecanico.html">Ingreso Mecánico <i class="fa-solid fa-lock fa-2xs"></i></a></li>
                 <li><a class="dropdown-item" href="../Login/loginMecanico.html">Ingreso Cliente <i class="fa-solid fa-lock fa-2xs"></i></a></li>
                 <li>
@@ -73,16 +73,18 @@
 
 
           <div class="mb-3">
-            <label for="email" class="form-label" aria-label="Ingrese su correo electronico.">Email: </label>
+            <label for="email" class="form-label" aria-label="Ingrese su correo electronico.">Email:</label>
             <input type="text" class="form-control" id="email" aria-required="true" placeholder="Ingrese su email." required>
+            <em>El email debe tener al menos 9 carácteres.</em>
             <div class="valid-feedback">
               Nice
             </div>
           </div>
-
+          
           <div class="mb-3">
             <label for="password" class="form-label" aria-label="Ingrese su password o contraseña">Password:</label>
             <input type="password" class="form-control" id="password" aria-required="true" placeholder="" required>
+            <em>Password debe tener 6 carácteres.</em>
             <div class="valid-feedback">
               Nice
             </div>
@@ -180,11 +182,11 @@
 
       var password = $('#password').val();
       if(!validarPassword(password)) {
-        alert(`Error en contraseña`)
+        alert(`Error en contraseña. Debe Tener 6 carácteres.`)
         return
       }
 
-      window.location.href = '../vistasOK/Index.html';
+      window.location.href = '../vistasOK/Cliente/IndexCliente.html';
 
   });
 
